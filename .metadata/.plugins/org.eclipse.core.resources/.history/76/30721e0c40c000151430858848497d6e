@@ -60,7 +60,7 @@ public class Main extends JFrame {
 	 */
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 607, 343);
+		setBounds(100, 100, 607, 451);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBorderPainted(false);
@@ -168,7 +168,7 @@ public class Main extends JFrame {
 		
 		txtEpost = new JTextField();
 		txtEpost.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtEpost.setText("0766754837");
+		txtEpost.setText("E-post");
 		txtEpost.setBounds(291, 139, 130, 26);
 		contentPane.add(txtEpost);
 		txtEpost.setColumns(10);
@@ -186,38 +186,36 @@ public class Main extends JFrame {
 		contentPane.add(btnSpara);
 		
 		txtName = new JTextField();
-		txtName.setEditable(false);
 		txtName.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtName.setText("Name:");
+		txtName.setText("Name");
 		txtName.setBounds(191, 28, 92, 26);
 		contentPane.add(txtName);
+		txtName.setColumns(10);
 		
 		txtPersonnr_1 = new JTextField();
-		txtPersonnr_1.setEditable(false);
 		txtPersonnr_1.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtPersonnr_1.setText("Personnr:");
+		txtPersonnr_1.setText("Personnr");
 		txtPersonnr_1.setBounds(191, 54, 92, 26);
 		contentPane.add(txtPersonnr_1);
+		txtPersonnr_1.setColumns(10);
 		
 		txtAdresse = new JTextField();
-		txtAdresse.setEditable(false);
 		txtAdresse.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtAdresse.setText("Adresse:");
+		txtAdresse.setText("Adresse");
 		txtAdresse.setBounds(191, 81, 92, 26);
 		contentPane.add(txtAdresse);
+		txtAdresse.setColumns(10);
 		
 		txtEpost_1 = new JTextField();
-		txtEpost_1.setEditable(false);
-		txtEpost_1.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtEpost_1.setText("E-post:");
+		txtEpost_1.setText("E-post");
 		txtEpost_1.setBounds(191, 111, 92, 26);
 		contentPane.add(txtEpost_1);
+		txtEpost_1.setColumns(10);
 		
 		txtNummer = new JTextField();
-		txtNummer.setEditable(false);
-		txtNummer.setFont(new Font("Avenir", Font.PLAIN, 12));
-		txtNummer.setText("Nummer:");
+		txtNummer.setText("Nummer");
 		txtNummer.setBounds(191, 138, 92, 26);
 		contentPane.add(txtNummer);
+		txtNummer.setColumns(10);
 	}
 }
