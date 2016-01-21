@@ -175,7 +175,7 @@ public class Main extends JFrame {
 		
 		JLabel lblBildejpg = new JLabel("bilde.jpg");
 		lblBildejpg.setIcon(new ImageIcon("/Users/johanneradford/Desktop/KD405A_Johanne_R/Assignment_1/src/bilde/Profil_bilde.jpg"));
-		lblBildejpg.setBounds(445, 27, 130, 161);
+		lblBildejpg.setBounds(445, 27, 130, 184);
 		contentPane.add(lblBildejpg);
 		
 		JButton btnSpara = new JButton("Spara");
@@ -219,10 +219,5 @@ public class Main extends JFrame {
 		txtNummer.setText("Nummer:");
 		txtNummer.setBounds(191, 138, 92, 26);
 		contentPane.add(txtNummer);
-		
-		JButton btnEndreBild = new JButton("Endre bild");
-		btnEndreBild.setFont(new Font("Avenir", Font.PLAIN, 12));
-		btnEndreBild.setBounds(455, 199, 117, 29);
-		contentPane.add(btnEndreBild);
 	}
 }

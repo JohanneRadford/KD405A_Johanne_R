@@ -221,7 +221,6 @@ public class Main extends JFrame {
 		contentPane.add(txtNummer);
 		
 		JButton btnEndreBild = new JButton("Endre bild");
-		btnEndreBild.setFont(new Font("Avenir", Font.PLAIN, 12));
 		btnEndreBild.setBounds(455, 199, 117, 29);
 		contentPane.add(btnEndreBild);
 	}
