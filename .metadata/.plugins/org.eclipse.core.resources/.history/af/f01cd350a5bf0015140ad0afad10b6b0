@@ -1,0 +1,135 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JScrollBar;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JList;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.JSpinner;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.Insets;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtNamn;
+	private JTextField txtPersonnr;
+	private JTextField txtAdress;
+	private JTextField txtTelefonummer;
+	private JTextField txtEpost;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+//first comment
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setMargin(new Insets(5, 2, 5, 2));
+		menuBar.setForeground(new Color(0, 0, 0));
+		setJMenuBar(menuBar);
+		
+		JMenu mnMedlemmer = new JMenu("Medlem");
+		mnMedlemmer.setForeground(new Color(0, 0, 0));
+		menuBar.add(mnMedlemmer);
+		
+		JCheckBoxMenuItem chckbxmntmMedlem_2 = new JCheckBoxMenuItem("Ny medlem");
+		mnMedlemmer.add(chckbxmntmMedlem_2);
+		
+		JCheckBoxMenuItem chckbxmntmMedlem_1 = new JCheckBoxMenuItem("Hitta medlem");
+		mnMedlemmer.add(chckbxmntmMedlem_1);
+		
+		JMenu mnArkiv = new JMenu("Arkiv");
+		mnArkiv.setForeground(new Color(0, 0, 0));
+		menuBar.add(mnArkiv);
+		
+		JCheckBoxMenuItem chckbxmntmSkrivUt = new JCheckBoxMenuItem("Skriv ut");
+		mnArkiv.add(chckbxmntmSkrivUt);
+		
+		JCheckBoxMenuItem chckbxmntmNewCheckItem = new JCheckBoxMenuItem("Avsluta");
+		mnArkiv.add(chckbxmntmNewCheckItem);
+		
+		JMenu mnHjelp = new JMenu("Hjelp");
+		mnHjelp.setForeground(new Color(0, 0, 0));
+		menuBar.add(mnHjelp);
+		
+		JCheckBoxMenuItem chckbxmntmHjelp = new JCheckBoxMenuItem("Hjelp");
+		mnHjelp.add(chckbxmntmHjelp);
+		
+		JCheckBoxMenuItem chckbxmntmOmProgrammet = new JCheckBoxMenuItem("Om programmet");
+		mnHjelp.add(chckbxmntmOmProgrammet);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(240, 248, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(6, 27, 91, 201);
+		contentPane.add(scrollPane);
+		
+		JTextArea txtrText = new JTextArea();
+		txtrText.setEditable(false);
+		scrollPane.setViewportView(txtrText);
+		txtrText.setText("text\n\ntext\ntext\n\ntext\ntext\n\ntext\ntext\n\ntext\ntext\n\ntext");
+		
+		txtNamn = new JTextField();
+		txtNamn.setFont(new Font("Helvetica Neue", Font.PLAIN, 13));
+		txtNamn.setText("Namn");
+		txtNamn.setBounds(267, 39, 130, 26);
+		contentPane.add(txtNamn);
+		txtNamn.setColumns(10);
+		
+		txtPersonnr = new JTextField();
+		txtPersonnr.setText("Personnr");
+		txtPersonnr.setBounds(267, 67, 130, 26);
+		contentPane.add(txtPersonnr);
+		txtPersonnr.setColumns(10);
+		
+		txtAdress = new JTextField();
+		txtAdress.setText("Adress");
+		txtAdress.setBounds(267, 98, 130, 26);
+		contentPane.add(txtAdress);
+		txtAdress.setColumns(10);
+		
+		txtTelefonummer = new JTextField();
+		txtTelefonummer.setText("Telefonummer");
+		txtTelefonummer.setBounds(267, 124, 130, 26);
+		contentPane.add(txtTelefonummer);
+		txtTelefonummer.setColumns(10);
+		
+		txtEpost = new JTextField();
+		txtEpost.setText("E-post");
+		txtEpost.setBounds(267, 151, 130, 26);
+		contentPane.add(txtEpost);
+		txtEpost.setColumns(10);
+	}
+}

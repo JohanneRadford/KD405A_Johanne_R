@@ -1,0 +1,73 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JCheckBoxMenuItem;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+//first comment
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnMedlemmer = new JMenu("Medlem");
+		menuBar.add(mnMedlemmer);
+		
+		JCheckBoxMenuItem chckbxmntmMedlem_2 = new JCheckBoxMenuItem("Ny medlem");
+		mnMedlemmer.add(chckbxmntmMedlem_2);
+		
+		JCheckBoxMenuItem chckbxmntmMedlem_1 = new JCheckBoxMenuItem("Hitta medlem");
+		mnMedlemmer.add(chckbxmntmMedlem_1);
+		
+		JMenu mnArkiv = new JMenu("Arkiv");
+		menuBar.add(mnArkiv);
+		
+		JCheckBoxMenuItem chckbxmntmSkrivUt = new JCheckBoxMenuItem("Skriv ut");
+		mnArkiv.add(chckbxmntmSkrivUt);
+		
+		JCheckBoxMenuItem chckbxmntmNewCheckItem = new JCheckBoxMenuItem("Avsluta");
+		mnArkiv.add(chckbxmntmNewCheckItem);
+		
+		JMenu mnHjelp = new JMenu("Hjelp");
+		menuBar.add(mnHjelp);
+		
+		JCheckBoxMenuItem chckbxmntmHjelp = new JCheckBoxMenuItem("Hjelp");
+		mnHjelp.add(chckbxmntmHjelp);
+		
+		JCheckBoxMenuItem chckbxmntmOmProgrammet = new JCheckBoxMenuItem("Om programmet");
+		mnHjelp.add(chckbxmntmOmProgrammet);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	}
+
+}
