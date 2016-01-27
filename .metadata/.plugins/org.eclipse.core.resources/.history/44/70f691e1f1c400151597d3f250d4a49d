@@ -129,7 +129,7 @@ public class CalculatorGUI extends JFrame {
 		JButton btnNewButton_8 = new JButton("9");
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText("9");
+				textArea.append("9");
 				myCalculator.numberButtonPressed(9);
 			}
 		});
