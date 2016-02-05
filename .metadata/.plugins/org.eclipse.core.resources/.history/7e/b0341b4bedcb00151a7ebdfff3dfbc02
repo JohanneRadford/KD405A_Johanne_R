@@ -11,7 +11,7 @@ public static String getAllBikes() {
 	
 String returnString = "";
 for (int a = 0; a < addBikes.size(); a ++) {
-returnString += ("bike " + (a + 1) + " pris " + addBikes.get(a).getPrice() + " og har fargen " + addBikes.get(a).getColor() + " og er størrelse " + addBikes.get(a).getSize() + "\n"); 
+returnString += ("bike " + (a + 1) + " size " + addBikes.get(a).getPrice() + " og har fargen " + addBikes.get(a).getColor() + " og er pris " + addBikes.get(a).getSize() + "\n"); 
 }
  return returnString;
 }

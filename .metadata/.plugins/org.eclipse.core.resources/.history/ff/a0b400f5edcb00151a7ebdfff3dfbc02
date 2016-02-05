@@ -80,14 +80,13 @@ public class BikeStoreGUI extends JFrame {
 		JButton btnNewButton = new JButton("Add bike");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				bikeStore1.addBike(textColor.getText(),Integer.parseInt(textSize.getText()), Integer.parseInt(textPrice.getText()));
+				bikeStore1.addBike(textColor.getText(),Integer.parseInt(textPrice.getText()), Integer.parseInt(textSize.getText()));
 				BikeListtextArea.setText(bikeStore1.getAllBikes());
 				textColor.setText("");
 				textPrice.setText("");
 				textSize.setText("");
 			}
 		});
-		
 		btnNewButton.setBounds(255, 99, 117, 98);
 		contentPane.add(btnNewButton);
 		
