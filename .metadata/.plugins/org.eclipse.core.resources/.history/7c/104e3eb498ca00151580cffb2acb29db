@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+
+
+public class BikeStore {
+
+
+	
+
+	public BikeStore() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Bike> GetArrayList(){
+			 for(Bike bikes : Bike){
+				 
+		    return allBikes;
+		  }
+		}
+		
+
+	  
+
+	}
+
+}

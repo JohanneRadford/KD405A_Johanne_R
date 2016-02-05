@@ -1,0 +1,42 @@
+
+public class Bike {
+private String color = "color";
+private int price;
+private int size;
+
+
+
+public Bike(String color, int size, int price){
+	this.color = color;
+	this.size = size;
+	this.price = price;
+}
+
+public Bike(String color, int size){
+	this.color = color;
+	this.size = size;
+	
+}
+
+public String getColor() {
+	return color;
+}
+
+
+public int getSize() {
+	return size;
+}
+
+public int getPrice() {
+	return price;
+}
+
+public void setPrice(int price) {
+	this.price = price;
+}
+
+
+
+
+}
+

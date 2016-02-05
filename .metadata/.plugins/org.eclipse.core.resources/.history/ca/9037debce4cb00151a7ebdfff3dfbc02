@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class bikeStore1 {
+
+private static ArrayList<Bike> addBikes = new ArrayList<Bike>();
+private static ArrayList<Bike> allBikes = new ArrayList<Bike>();
+
+public static String getAllBikes() {
+	
+String returnString = "";
+for (int a = 0; a < addBikes.size(); a ++) {
+returnString += ("bike " + (a + 1) + " size " + addBikes.get(a).getPrice() + " og har fargen " + addBikes.get(a).getColor() + " og er pris " + addBikes.get(a).getSize() + "\n"); 
+}
+ return returnString;
+}
+
+public static void addBike(String color, int size, int price) {
+addBikes.add(new Bike(color, size, price));
+}
+
+}
+
+

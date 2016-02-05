@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+
+
+
+public class Main {
+
+	private static ArrayList<Bike> bikeList = new ArrayList<Bike>();
+
+	public static Bike[] myBikes;
+	
+
+	public static void main(String[] args) {
+		
+
+		myBikes = new Bike[10];
+		
+		 myBikes[0] = new Bike("green", 10, 20);
+		 myBikes[1] = new Bike("red", 20, 10);
+		 myBikes[2] = new Bike("blue", 10, 20);
+		 myBikes[3] = new Bike("yellow", 20, 10);
+		 myBikes[4] = new Bike("silver", 10, 20);
+		 myBikes[5] = new Bike("gold", 40, 10);
+		 myBikes[6] = new Bike("purple", 10, 40000);
+		 myBikes[7] = new Bike("white", 20, 10);
+		 myBikes[8] = new Bike("black", 10, 20);
+		 myBikes[9] = new Bike("pink", 20, 10);
+		
+		 for(int i = 0; i < 10; i++){
+				System.out.println("sykkel " + (i) + " "+ myBikes[i].getSize() +  " " + myBikes[i].getPrice() + " " + myBikes[i].getColor());
+		
+				
+				if( myBikes[i].getPrice() < Constants.getMinPrice() || myBikes[i].getPrice() > Constants.getMaxPrice()){
+					System.out.println( + myBikes[i].getPrice() + " er feil pris, pris må være mellom " + Constants.getMinPrice() + " og " + Constants.getMaxPrice());
+						
+						}
+				if(myBikes[i].getSize() < Constants.getMinSize() || myBikes[i].getSize() > Constants.getMaxSize()){
+					System.out.println(myBikes[i].getSize() + " er feil størrelse, størrelsen må være mellom " + Constants.getMinSize() + " og " + Constants.getMaxSize());
+						}	
+				
+				if(!myBikes[i].getColor().equals(Constants.bikeColors[i])){
+					System.out.println("feil");
+				}else{
+					System.out.println("rett");
+					}
+					
+				}
+				
+				
+		/**for(int a =0; a < Constants.bikeColors.length; a++){
+			if( Constants.bikeColors[a].equals(myBikes[a].getColor())){
+				System.out.println(" ");
+			} else {
+				System.out.println("feil farge");
+			}
+			
+		}*/
+		
+
+	
+		
+		 }
+		 
+		 
+
+	}
+	
+
+
+
+	
+	
+
+
+
+

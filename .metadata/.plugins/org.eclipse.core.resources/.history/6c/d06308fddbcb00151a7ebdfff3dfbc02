@@ -1,0 +1,73 @@
+
+public class Bike {
+private String color;
+private int price;
+private int size;
+private int numberOfBikes;
+
+
+/**Generate bikes with variables limited by values in Constans.java*/
+public Bike(String color, int size, int price){
+	this.color = color;
+	this.size = size;
+	this.price = price;
+	
+	for(int i =0; i<Constants.bikeColors.length; i++){
+		 if(0 == color.compareTo(Constants.bikeColors[i].toString())){
+			this.color = color;
+			break;
+		 }else{
+			 this.color = "feil farge";
+		 }
+	}
+}
+
+public void setPrice(int price) {
+	if (getPrice() < Constants.MIN_PRICE && getPrice() > Constants.MAX_PRICE) {
+		this.price = 0;
+		
+	}
+}
+
+public void setSize(int size){
+	if (getSize() < Constants.MIN_SIZE && getSize() > Constants.MAX_SIZE){
+		this.size = 0;
+		
+	}
+}
+
+/**Generate bikes with variables limited by values in Constans.java*/
+public Bike(String color, int size){
+	this.color = color;
+	this.size = size;	
+	
+}
+
+
+
+/**Method used in Main.java to return Color*/
+public String getColor() {
+	return this.color;
+}
+
+/**Method used in Main.java to return size*/
+public int getSize() {
+	return this.size;
+}
+
+/**Method used in Main.java to return price*/
+public int getPrice() {
+	return this.price;
+}
+
+public int getNumberOfBikes(){
+	return this.numberOfBikes;
+}
+
+
+
+
+
+
+}
+

@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class BikeStore {
+	
+	public String getAllBikes(){
+		
+	}
+	
+	public void addBike(String color, int size, int price){
+		
+	}
+	
+	
+	
+		
+
+	public BikeStore(String name) {
+		
+		
+	}
+	
+	public void addBike(Bike k){
+		
+	}
+	
+ 
+	
+		
+
+	  
+
+	}
+
+}

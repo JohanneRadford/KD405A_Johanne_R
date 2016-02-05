@@ -1,0 +1,69 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+
+public class BikeStoreGUI extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BikeStoreGUI frame = new BikeStoreGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public BikeStoreGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		bikeStore1 myBikeStore = new bikeStore1();
+		
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(25, 20, 139, 234);
+		contentPane.add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		textArea.(myBikeStore.getAllBikes());
+		
+		JTextArea textArea_1 = new JTextArea();
+		textArea_1.setBounds(207, 20, 110, 27);
+		contentPane.add(textArea_1);
+		
+		JTextArea textArea_2 = new JTextArea();
+		textArea_2.setBounds(217, 59, 135, 33);
+		contentPane.add(textArea_2);
+		
+		JTextArea textArea_3 = new JTextArea();
+		textArea_3.setBounds(227, 110, 135, 39);
+		contentPane.add(textArea_3);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(219, 195, 117, 29);
+		contentPane.add(btnNewButton);
+	}
+}

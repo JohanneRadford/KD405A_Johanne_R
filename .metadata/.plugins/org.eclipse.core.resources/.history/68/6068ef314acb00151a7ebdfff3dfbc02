@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class bikeStore1 {
+	
+	private static ArrayList<Bike> allBikes = new ArrayList<Bike>();
+	
+	public ArrayList<Bike> getAllBikes(){
+		return allBikes;
+		
+	}
+	
+	public static String addBike(String color, String size, String price){
+		for(Bike bikes : allBikes){
+		if (bikes.getNumberOfBikes() < Constants.MAX_NUMBER_OF_BIKES){
+			addBike(color, size, price);
+		}
+			
+	}
+		return price;
+	}
+	public bikeStore1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bike Bike0 = new Bike("green", 10, 20);
+		allBikes.add(Bike0);
+		
+		
+		 int i = 1;
+			 for(Bike bikes : allBikes){
+				System.out.println("sykkel " +(i++)+ " "+ bikes.getSize() +  " " + bikes.getPrice() + " " + bikes.getColor() + "\n");
+				if( bikes.getPrice() < Constants.getMinPrice() || bikes.getPrice() > Constants.getMaxPrice()){
+					System.out.println( bikes.getPrice() + " er feil pris, pris må være mellom " + Constants.getMinPrice() + " og " + Constants.getMaxPrice()+ "\n");
+						
+						}
+				if(bikes.getSize() < Constants.getMinSize() || bikes.getSize() > Constants.getMaxSize()){
+					System.out.println(bikes.getSize() + " er feil størrelse, størrelsen må være mellom " + Constants.getMinSize() + " og " + Constants.getMaxSize()+ "\n");
+						}	
+
+	}
+
+}
+}
