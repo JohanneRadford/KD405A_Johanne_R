@@ -88,7 +88,6 @@ public class BikeStoreGUI extends JFrame {
 			}
 		});
 		
-		
 		btnNewButton.setBounds(255, 99, 117, 98);
 		contentPane.add(btnNewButton);
 		

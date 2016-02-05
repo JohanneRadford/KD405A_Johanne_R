@@ -16,7 +16,7 @@ returnString += ("bike " + (a + 1) + " pris " + addBikes.get(a).getPrice() + " o
  return returnString;
 }
 
-/**Method that adds bikes to the list*/
+/**Method that add bikes to the list*/
 
 public static void addBike(String color, int size, int price) {
 addBikes.add(new Bike(color, size, price));
