@@ -5,7 +5,7 @@ public class bikeStore1 {
 
 private static ArrayList<Bike> addBikes = new ArrayList<Bike>();
 
-/**Method that returns all bikes added to the list of Bikes*/
+/**Method that returns all bikes added to addBike()*/
 
 public static String getAllBikes() {
 	

@@ -1,0 +1,37 @@
+
+public class Human {
+	
+	
+	private Dog dog;
+	private String name;
+	private String info;
+	//private String NullDog;
+
+	public Human(String name) {
+		this.name = name;
+		
+	
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	
+	public Dog buyDog(Dog dog1){
+		this.dog = dog1;
+		return dog;
+			
+	}
+	
+	public String getInfo(String info){
+		if(dog == null){
+			info = getName() + " has no dog ";
+		} else {
+			info = getName() + " is buying a dog named " + dog.getName();
+		}
+		return info;
+	
+	}
+
+}

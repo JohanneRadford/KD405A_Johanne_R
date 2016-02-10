@@ -1,0 +1,48 @@
+
+
+import java.util.ArrayList;
+
+import java.util.Iterator;
+
+
+public class dogStore extends Human{
+	
+	public dogStore(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+	private static ArrayList <Human> addHumans = new ArrayList <Human>();
+	private static ArrayList <Dog> addDogs = new ArrayList <Dog>();
+
+
+
+	
+public static String getAllHumans(){
+		String returnString = "";
+		for (int i = 0; i <addHumans.size(); i ++) {
+			returnString = ( getName() );
+		}
+		return returnString;
+	}
+	
+	public static void addHumans(String name){
+		addHumans.add(new Human(name));
+	}
+	
+	
+	public static String getAllDogs(){
+		String returnString = "";
+		for (int i = 0; i <addDogs.size(); i ++) {
+			returnString = ( buyDog());
+		}
+		return returnString;
+	}
+	
+	public static void addDogs(String name){
+		addDogs.add(new Dog(name));
+	}
+}
+
+
+

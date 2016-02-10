@@ -1,0 +1,35 @@
+
+public class Cat extends Mammal{
+
+	private int numberOfLifes;
+	//private String info;
+	
+	public Cat(String latinName, int gestationTime, int numberOfLifes) {
+		super(latinName, gestationTime);
+		this.numberOfLifes = numberOfLifes;
+	}
+	
+	public int getNumberOfLifes(){
+		return numberOfLifes;
+	}
+	
+
+	public void setNumberOfLifes(int i){
+		this.numberOfLifes = i;
+		
+	}
+	
+	/**
+	@Override
+	public String getInfo() {
+		if(numberOfLifes == (Integer)null){
+			info = " katten har "+ getNumberOfLifes() + " liv. ";
+		
+	}
+		return null;
+
+
+}*/
+
+}
+

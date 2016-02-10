@@ -1,0 +1,33 @@
+
+public class Snake extends Animal {
+
+	private boolean poisonous;
+	private String info;
+	
+	
+	public Snake(String latinName, boolean poisonous) {
+		super(latinName);
+		this.poisonous = poisonous;
+	}
+	
+	public boolean isPoisonous(){
+		return poisonous;
+	}
+
+	@Override
+	public String getInfo() {
+	if(poisonous){
+		info =  " is poisonous " ;
+	}else{
+		
+	info = 	" is not poisonous ";
+	
+	}
+		return "The snake named " + getLatinName()  + info;
+
+	}
+	
+}
+
+ 
+

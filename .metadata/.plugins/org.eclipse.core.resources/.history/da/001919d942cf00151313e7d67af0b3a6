@@ -1,0 +1,26 @@
+
+public class Dog {
+	
+	private static String name;
+	
+	
+	
+	public Dog(String name) {
+		
+		if(Human.getName().length() >= 3){
+	Dog.name = name;
+		}else{
+			Dog.name = "Kan ikke skape hund uten eier";
+		}
+		
+	}
+	
+	
+
+	public static String getDogName(){
+		return Dog.name;
+	}
+	
+	
+
+}

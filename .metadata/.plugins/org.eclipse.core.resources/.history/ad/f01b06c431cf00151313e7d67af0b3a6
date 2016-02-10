@@ -1,0 +1,33 @@
+
+public class Human {
+	
+	
+	private static int Dog;
+	private static String name;
+
+	public Human(String name) {
+		
+			
+		if (name.length() >= Constants.MIN_NUMBER_OF_LETTERS){
+		this.name = name;
+		}else{
+			this.name = "navn må ha minimum tre bokstaver";
+		}
+	}
+	
+	
+	public static String getName(){
+		return name;
+	}
+	
+	
+	public static int buyDog(){
+		return Dog;
+			
+	}
+	
+	//public String getInfo(){	
+	
+	//}
+
+}
