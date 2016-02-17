@@ -1,0 +1,36 @@
+import java.util.Calendar;
+
+public class ClockLogic {
+
+	private ClockLogic clockGUI;
+	private int alarmHour;
+	private int alarmMinute;
+	
+	public ClockLogic (DigitalClockGUI digitalCloclGUI){
+		
+	}
+	
+	public void setAlarm(int hours, int minutes){
+		
+	}
+	
+	public void clearAlarm(){
+		
+		
+	}
+	
+	private class ClockThread extends Thread{
+		@Override
+		public void run() {
+			while(true);
+			// TODO Auto-generated method stub
+			//super.run();
+		}
+
+			
+			
+		}
+		
+		
+	}
+

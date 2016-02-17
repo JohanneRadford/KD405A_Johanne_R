@@ -30,7 +30,7 @@
 	<section name="javadoc">
 		<item value="public" key="access"/>
 		<item value="false" key="noindex"/>
-		<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/Assignment_3/javadoc.xml" key="antpath"/>
+		<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/KD405A_Radford_J_Uppgift4B/javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
 		<item value="true" key="use"/>
 		<item value="true" key="author"/>
@@ -44,7 +44,7 @@
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/Assignment_3/doc" key="destdir"/>
+		<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/KD405A_Radford_J_Uppgift4B/doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
 			<section name="Assignment_2">
@@ -75,6 +75,11 @@
 			<section name="Assignment_7">
 				<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/Assignment_7/javadoc.xml" key="antpath"/>
 				<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/Assignment_7/doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="KD405A_Radford_J_Uppgift4B">
+				<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/KD405A_Radford_J_Uppgift4B/javadoc.xml" key="antpath"/>
+				<item value="/Users/johanneradford/Desktop/KD405A_Johanne_R/KD405A_Radford_J_Uppgift4B/doc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
 			<section name="House">
