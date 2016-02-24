@@ -105,14 +105,6 @@ public void setTimeOnLabel(String time){
 		contentPane.add(btnSetAlarm);
 		
 		JButton btnClearAlarm = new JButton("CLEAR ALARM");
-		btnClearAlarm.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				labelAlarmTime.setText(" ");
-				clockLogic.clearAlarm();
-				
-			}
-		});
 		btnClearAlarm.setBounds(192, 219, 117, 29);
 		contentPane.add(btnClearAlarm);
 		

@@ -25,17 +25,22 @@ public class DigitalClockGUI extends JFrame {
 	private JLabel labelAlarm;
 	private JLabel labelAlarmTime;
 	private JLabel lblTimeIs;
+	private boolean alarmOn;
 
 	
 public void setTimeOnLabel(String time){
 	labelTime.setText(time);
 }
 
+public void showAlarmTimeOnLabel(String alarmTime){
+	labelAlarmTime.setText(alarmTime);
+}
 
 	public void activateAlarm(boolean activate){
-		if(activate == true){
-			labelAlarmTime.setText("Alarm!!");
-		
+		if(activate){
+			labelAlarm.setText("RINGRING");
+		}else{
+			activate = false;
 		}
 		
 	}
@@ -87,32 +92,30 @@ public void setTimeOnLabel(String time){
 		JButton btnSetAlarm = new JButton("SET ALARM");
 		btnSetAlarm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				int hours;
+				int minutes;
 				String hourString = textFieldHours.getText();
+				hours = Integer.parseInt(hourString);
 				String minuteString = textFieldMinutes.getText();
+				minutes =  Integer.parseInt(minuteString);
+				ClockLogic.setAlarm(hours, minutes);
 				
-				int hour = Integer.parseInt(hourString);
-			    int minute = Integer.parseInt(minuteString);
-			    
-				clockLogic.setAlarm(hour, minute);
+				//labelAlarmTime.setText(hourString + " : " +  minuteString);
 				
-				labelAlarmTime.setText(hourString + " : " + minuteString);
-				
-			
+			/**if(Integer.parseInt(textFieldHours.getText()) >= 1  && Integer.parseInt(textFieldHours.getText())  <= 24 && Integer.parseInt(textFieldMinutes.getText()) >= 0 && Integer.parseInt(textFieldMinutes.getText()) <= 60) {
+				labelAlarmTime.setText(textFieldHours.getText() + " : " + textFieldMinutes.getText());
+		} else {
+			JOptionPane.showMessageDialog(null, "Hours must be between 1 and 24 and minutes must be between 0 and 60");
+		}
+	*/
+			//textFieldHours.setText("");
+			//textFieldMinutes.setText("");
 			}
 		});
 		btnSetAlarm.setBounds(47, 219, 117, 29);
 		contentPane.add(btnSetAlarm);
 		
 		JButton btnClearAlarm = new JButton("CLEAR ALARM");
-		btnClearAlarm.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				labelAlarmTime.setText(" ");
-				clockLogic.clearAlarm();
-				
-			}
-		});
 		btnClearAlarm.setBounds(192, 219, 117, 29);
 		contentPane.add(btnClearAlarm);
 		
@@ -135,11 +138,7 @@ public void setTimeOnLabel(String time){
 		contentPane.add(lblTimeIs);
 		
 		clockLogic = new ClockLogic(this);
-		
-		
 	}
 	
 	
-	
 }
-

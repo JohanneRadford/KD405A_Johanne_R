@@ -108,7 +108,7 @@ public void setTimeOnLabel(String time){
 		btnClearAlarm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				labelAlarmTime.setText(" ");
+				labelAlarmTime.setText("Ingen alarm aktivert");
 				clockLogic.clearAlarm();
 				
 			}
