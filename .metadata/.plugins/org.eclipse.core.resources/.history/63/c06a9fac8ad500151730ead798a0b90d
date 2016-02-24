@@ -1,0 +1,91 @@
+import java.util.Calendar;
+
+public class ClockLogic {
+
+	private ClockLogic digitalClockGUI;
+	private int alarmHour;
+	private int alarmMinute;
+	private DigitalClockGUI digClockGUI;
+
+	
+	public ClockLogic (DigitalClockGUI digitalClockGUI){
+		this.digClockGUI = digitalClockGUI;
+		ClockThread ca = new ClockThread();
+		ca.start();
+		
+	}
+	
+public void setAlarm(int hours, int minutes){
+		
+		if (hours >= 1 && hours <= 24) {
+		}
+		
+		hours = alarmHour;
+		
+
+	
+	if(minutes>=1 && minutes <= 60){
+		minutes = alarmMinute;
+		
+	}
+
+	//if (alarmHour >= 0 && alarmMinute >=0){
+		
+	//	digClockGUI.showAlarmTimeOnLabel(String.valueOf(hours) + String.valueOf(minutes));
+	//}
+		
+	}
+		
+	
+	
+	
+	public void clearAlarm(){
+		
+		
+	}
+	
+	
+	
+	private class ClockThread extends Thread{
+		@Override
+		public void run() {
+			while(true){
+				
+				Calendar c = Calendar.getInstance();
+				int hour = c.get(Calendar.HOUR_OF_DAY);
+				int min = c.get(Calendar.MINUTE);
+				int second = c.get(Calendar.SECOND);
+				
+				// String time = hour+":"+ min + ":" + second;
+			//	System.out.println(time);
+
+
+				digClockGUI.setTimeOnLabel(String.valueOf(hour) + " : "+ String.valueOf(min) + " : " + String.valueOf(second));
+				
+				if( hour == alarmHour && min == alarmMinute){
+					digClockGUI.activateAlarm(true);
+				}
+				
+				try {
+					Thread.sleep(900);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+					
+					return;
+				}
+				
+			
+			}
+			
+			
+		}
+
+			
+			
+	}
+	
+
+
+		
+	}
+

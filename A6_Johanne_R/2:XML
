@@ -1,0 +1,18 @@
+2:XML
+
+1	Från Malmö C til Lund C
+2	?cmdaction=next&selPointFr=0|80000|0&selPointTo=5|81216|5
+3	<Journeys></Journeys> - inneholder all info om reiser <Journey></Journey>
+	<Journey></Journey> - inneholder en reise med all informasjon om den: hvilken sone, info om typ av billett, pris på billett, hvilke stasjoner man har søkt fra og til, hvilke tog det er og sluttdestinasjon til toget, hvilke tog som har forseninger samt <RouteLinks></RouteLinks>.
+	<RouteLinks></RouteLinks> - inneholder andre reiser/delreiser fra <RouteLink></RouteLink>
+	<RouteLink></RouteLink> - inneholder all informasjon om de reisene, departure time og arrival time, id til tidssoner, stasjoner man reiser mellom, hvilke tog det er og sluttdestinasjon til toget, hvilke tog som har forseninger.
+	
+	Hierarki
+	Journeys 1
+	Journey 1 ...*
+	RouteLinks 1
+	RouteLink 1...*
+	
+4	<NoOfChanges>0</NoOfChanges> og den ligger i hovedtagg Journey
+5	<PriceInfo> 
+

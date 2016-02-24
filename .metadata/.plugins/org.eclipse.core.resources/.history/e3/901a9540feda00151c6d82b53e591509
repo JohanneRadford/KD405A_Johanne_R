@@ -1,0 +1,106 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import se.mah.k3lara.skaneAPI.control.Constants;
+import se.mah.k3lara.skaneAPI.model.Journey;
+import se.mah.k3lara.skaneAPI.model.Journeys;
+import se.mah.k3lara.skaneAPI.model.Line;
+import se.mah.k3lara.skaneAPI.model.Lines;
+import se.mah.k3lara.skaneAPI.model.Station;
+import se.mah.k3lara.skaneAPI.xmlparser.Parser;
+
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.awt.event.ActionEvent;
+
+public class SkanetrafikenGUI extends JFrame {
+	
+	ArrayList<Station> searchStations = new ArrayList<Station>();
+
+
+	private JPanel contentPane;
+	private JTextField textFieldStation;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SkanetrafikenGUI frame = new SkanetrafikenGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SkanetrafikenGUI() {
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 667, 551);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+				
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(28, 20, 583, 378);
+		contentPane.add(scrollPane);
+		
+		final JTextArea resultTextArea = new JTextArea();
+		scrollPane.setViewportView(resultTextArea);
+		
+		textFieldStation = new JTextField();
+		textFieldStation.setBounds(53, 410, 130, 26);
+		contentPane.add(textFieldStation);
+		textFieldStation.setColumns(10);
+		
+		JButton searchStation = new JButton("New button");
+		searchStation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String searchURL = Constants.getURL("80000","81216",20); //Malm� C = 80000,  Lund C, 81216 Malm� Gatorg 80100, H�ssleholm C 93070
+				
+				searchStations.addAll(Parser.getStationsFromURL(textFieldStation.getText()));
+				for (Station s: searchStations){
+					resultTextArea.append(s.getStationName() +" number:" +s.getStationNbr() + "\n");
+				}
+				
+				resultTextArea.append(" ");
+				/**
+				
+				Lines lines = Parser.getStationResults(new Station("80046"));
+				for (Line l : lines.getLines()) {
+					resultTextArea.append("Line " + l.getLine() +" departs: "+l.getDepTime().get(Calendar.HOUR_OF_DAY)+":"+l.getDepTime().get(Calendar.MINUTE)+
+							" and is "+l.getDepTimeDeviation()+" minutes late" + "\n");
+				}
+				
+				Journeys journeys = Parser.getJourneys(searchURL);
+				for (Journey journey : journeys.getJourneys()) {
+					resultTextArea.append(journey.getStartStation()+" - " + journey.getEndStation());
+					String time = journey.getDepDateTime().get(Calendar.HOUR_OF_DAY)+":"+journey.getDepDateTime().get(Calendar.MINUTE);
+					resultTextArea.append(" Departs " + time +" that is in "+journey.getTimeToDeparture()+ " minutes. And it is "+journey.getDepTimeDeviation()+" min late" + "\n");
+				}  */
+			}
+		});
+		searchStation.setBounds(321, 410, 117, 29);
+		contentPane.add(searchStation);
+	}
+	
+	}
